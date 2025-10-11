@@ -1,0 +1,171 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content {
+  background: white; padding: 25px; border-radius: 8px; width: 90%; max-width: 400px;
+}
+.modal-content form { display: flex; flex-direction: column; gap: 15px; }
+.modal-content input { padding: 10px; font-size: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 15px; }
+.modal-actions button { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+.confirm-btn { background-color: #28a745; color: white; }
+.cancel-btn { background-color: #6c757d; color: white; }
+.error-message { color: #dc3545; }
+
+.time-slot-button:not(:disabled):hover {
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+/* Style for available slots */
+.time-slot-button.available {
+  background-color: #d4edda; /* Light green */
+  border-color: #c3e6cb;
+  color: #155724;
+}
+.time-slot-button.available:hover {
+  background-color: #b1dfbb;
+}
+
+/* Style for slots with few spaces left */
+.time-slot-button.few-left {
+  background-color: #fff3cd; /* Light yellow */
+  border-color: #ffeeba;
+  color: #856404;
+}
+.time-slot-button.few-left:hover {
+  background-color: #ffe8a1;
+}
+
+/* Style for full slots (replaces :disabled) */
+.time-slot-button.full {
+  background-color: #f8d7da; /* Light red */
+  border-color: #f5c6cb;
+  color: #721c24;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* In src/App.css */
+
+.hourly-container {
+  margin-top: 1.5rem;
+}
+
+.hour-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expanded-slots {
+  padding: 1rem;
+  margin-left: 1rem;
+  border-left: 2px solid #666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Heatmap Colors */
+.hour-btn.available { background-color: rgba(40, 167, 69, 0.3); }
+.hour-btn.busy { background-color: rgba(255, 193, 7, 0.3); }
+.hour-btn.full { background-color: rgba(220, 53, 69, 0.3); color: #888; cursor: not-allowed; }
+
+.hour-btn:not(.full):hover {
+  transform: scale(1.02);
+  border-color: #fff;
+}
+
+
+/* In src/App.css */
+
+.time-slot-button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1 1 30%; /* <-- ADD THIS LINE */
+  text-align: center; /* Add this for better alignment */
+}
+
+
+
+
+
+/*AFTER NEW VERSION */
+
+
+
+
+
+
+/* In src/App.css */
+
+/* Styles for the Leaflet Map */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Ensure popups in dark mode are readable */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #333;
+  color: #fff;
+}
